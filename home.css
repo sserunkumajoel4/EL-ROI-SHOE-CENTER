@@ -1,0 +1,51 @@
+.page{display: grid;background: linear-gradient(to bottom right, grey, green);gap: 20px;}
+.page{grid-template-columns:  1fr 1fr 1fr 1fr;
+    grid-row: 0.3fr 2.3fr 1fr 0.8fr;
+    grid-template-areas: 
+    "nav nav nav nav "
+    "side main main main"
+    "side section1 section2 section3"
+    "footer footer footer footer"
+    ;}
+    .nav{grid-area:nav ;background-color:white ;display: flex;justify-content: center;align-items: center;padding: 20px;box-shadow: 15px 3px 7px black;color: blue;}
+    .side{grid-area: side;background-color: rgb(12, 12, 82);}
+    .main{grid-area:main ;background-image: url(canvas.jpg);height: 400px;background-size: cover;background-repeat: no-repeat;animation-duration: 2s;animation-iteration-count: infinite;
+    display: flex;flex-direction: column;align-items: center;justify-content: center;}
+    .section1{grid-area:section1 ;background-color:grey ;height: auto;}
+    .section2{grid-area:section2 ;background-color:white;height: auto;}
+    .section3{grid-area:section3 ;background-color:gray ;height: auto;}
+    button:hover{background-color: blue;color: white;}
+    button{border-radius: 10px;width: 90px;height: 40px;}
+    .footer{grid-area:footer ;background-color:rgb(22, 6, 112);display: flex;align-items: center;padding: 30px;height: auto;color: white;}
+    .main{animation-name: intro;}
+    @keyframes intro { from {background-image:url(canvas.jpg) ;} 
+    to{background-image: url(HI.jfif);}
+        
+    }
+    input{padding: 10px;font-size: 20px;border-radius: 10px;}
+    button{font-size: 20px;}
+    .intro{font-size: 22px;text-shadow: 2px 3px rgb(61, 51, 51);color: white;}
+    .logo{border-radius: 50%;width: 90px;height: 90px;}
+    @media screen and (max-width:768px) {
+       .page{ grid-template-columns: 1fr;
+        grid-template-areas: "nav"  
+        "side"
+        "main"
+        "section1"
+        "section2"
+        "section3"
+        "footer"
+        
+        
+        ; }
+        .main{padding: 10px;}
+        
+    }
+    img{width: 100%;height: auto;}
+    .one{flex: 1;}
+    .two{flex: 1;}
+    .three{flex: 1;}
+    @media screen and (max-width:768px) {
+        .footer{flex-direction: column;}
+        
+    }
